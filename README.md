@@ -71,6 +71,3 @@ Copy the link written after "Listening on" on a web browser. The shiny app scLRS
 >
 > For all subsequent times, you just have to **run the Docker image and copy the link to your web browser**.
 
-<br>
-<br>
-<br>
