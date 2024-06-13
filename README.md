@@ -27,7 +27,7 @@ Furthermore, an open-access journal article describing scLRSomatoDev has been pu
 * Download the required Data available on [Zenodo](inc).
     + Ddownload the data.zip and "extract here" within the the scLRSomatoDev folder.
 
-* Before started files in your scLRSomatoDev folder shoud look like this :
+* Before started, files in your scLRSomatoDev folder shoud look like this :
 
   <p align="center">
   <br>
