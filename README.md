@@ -31,7 +31,7 @@ Furthermore, an open-access journal article describing scLRSomatoDev has been pu
 
   <p align="center">
   <br>
-    <img width="600" src="Folder_structure.png" alt="Folder_structure">
+    <img width="600" src="images/Folder_structure.png" alt="Folder_structure">
 </p>
   
 
