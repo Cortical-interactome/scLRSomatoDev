@@ -3,7 +3,7 @@
 
 <p align="center">
   <br>
-    <img width="600" src="logo_scLRSomatoDev.svg" alt="logo_scLRSomatoDev">
+    <img width="600" src="images/logo_scLRSomatoDev.svg" alt="logo_scLRSomatoDev">
  <br>
  <br>
 </p>
