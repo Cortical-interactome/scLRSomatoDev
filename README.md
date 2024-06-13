@@ -64,7 +64,7 @@ On your terminal application, it will be displayed:
 Listening on http://0.0.0.0:3838
 ```
 
-Copy the link written after "Listening on" on a web browser. The shiny app scLRSomatoDev should be displayed after few minutes.
+The app will be up and running at http://localhost:3838. The shiny app scLRSomatoDev should be displayed after few minutes.
 
 > [!NOTE]
 >  You do not have to go through all these steps each time to launch the scLRSomatoDev shiny App. **You have to build the image only the first time**.
