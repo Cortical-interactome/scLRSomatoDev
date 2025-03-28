@@ -147,3 +147,15 @@ For easy use, we have set up a dedicated server running scLRSomatoDev that you c
 
 ## Contact us
 
+* **Technical Support & Bug Reports**
+  * Create an issue on our [GitHub repository](https://github.com/yourusername/scLRSomatoDev/issues)
+  * Include detailed steps to reproduce any problems
+
+* **General Inquiries**
+  * Email: [support@sclrsomatodev.online](mailto:support@sclrsomatodev.online)
+  * Response time: Usually within 2 business days
+
+> [!NOTE]
+> For faster response, please include your operating system, installation method (Online/RStudio/Docker), and any relevant error messages.
+
+
