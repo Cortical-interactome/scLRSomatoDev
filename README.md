@@ -9,7 +9,21 @@
 
 ## Introduction
 
-TODO: introduction text.
+scLRSomatoDev is a powerful Shiny application designed to explore and analyze ligand-receptor (LR) interactions in cortical development. This tool represents a significant advancement in understanding the molecular mechanisms underlying brain circuit assembly through large-scale single-cell transcriptomic analyses. With its intuitive design, scLRSomatoDev enables seamless exploration of complex biological data.
+
+### Key Features
+
+* Access detailed spatiotemporal transcriptional landscapes across neuronal subtypes
+* Explore gene expression patterns and LR interactions at any developmental stage
+* Predict and analyze LR interactions between different neuronal cell types
+
+### Availability
+
+We provide multiple installation options to suit your needs:
+
+* Online version for quick access
+* Local installation via RStudio
+* Docker container for reproducible environments
 
 ## Table of Contents
 
