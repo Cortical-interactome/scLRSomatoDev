@@ -21,7 +21,7 @@ scLRSomatoDev is a powerful Shiny application designed to explore and analyze li
 
 We provide multiple installation options to suit your needs:
 
-* Online version for quick access
+* online for quick and easy use (limited to one user currently)
 * Local installation via RStudio
 * Docker container for reproducible environments
 
@@ -54,7 +54,7 @@ We provide multiple installation options to suit your needs:
    * Extract the contents of the ZIP file to your desired location
 
 2. **Download the required data**:
-   * Visit our [Zenodo repository](inc)
+   * Visit our [Zenodo repository](https://github.com/Cortical-interactome/scLRSomatoDev/) (TODO: Finish Zenodo Repo + add URL)
    * Download the `data.zip` file
    * Extract the contents into your scLRSomatoDev folder
    * Verify your folder structure matches the following :
@@ -86,8 +86,9 @@ For easy use, we have set up a dedicated server running scLRSomatoDev that you c
 ### Using RStudio
 
 #### Prerequisites
-* **RStudio**: If you don't have RStudio installed, please [download and install it](https://posit.co/download/rstudio-desktop/) before continuing.
-* **Conda**: Make sure you have Conda installed on your system.
+* **R** : The app has been tested with R versions 4.3.2 and 4.2. If you do not have R installed, please [download and install it](https://pbil.univ-lyon1.fr/CRAN/) before proceeding.
+* **RStudio**: If RStudio is not installed, please [download and install it](https://posit.co/download/rstudio-desktop/) before proceeding.
+* **Conda**: Ensure Conda is installed on your system. If not, please [download and install Anaconda Or Miniconda](https://www.anaconda.com/download/success) before proceeding.
 
 #### Setup Instructions
 
@@ -108,7 +109,7 @@ For easy use, we have set up a dedicated server running scLRSomatoDev that you c
     install.packages(c("shiny", "tidyverse", "Seurat", "ggplot2", "dplyr", "tidyr"))
     ```
   
-5. Run the Shiny app:
+5. To run the Shiny app, click the 'Run' or 'Play' button in either the ui.r or server.r file or run the following command : 
     ```{r}
     shiny::runApp("app.R")
     ```
@@ -119,7 +120,7 @@ For easy use, we have set up a dedicated server running scLRSomatoDev that you c
 
 #### Prerequisites
 
-* **Docker**: If you don't have Docker installed, please [download and install it](https://www.docker.com/products/docker-desktop/) before continuing.
+* **Docker**: If you don't have Docker installed, please [download and install it](https://www.docker.com/products/docker-desktop/) before proceeding.
 
 #### Setup Instructions
 
@@ -156,6 +157,6 @@ For easy use, we have set up a dedicated server running scLRSomatoDev that you c
   * Response time: Usually within 2 business days
 
 > [!NOTE]
-> For faster response, please include your operating system, installation method (Online/RStudio/Docker), and any relevant error messages.
+> For faster response, please include your operating system, Usage method (Online/RStudio/Docker), and any relevant error messages.
 
 
