@@ -17,13 +17,10 @@ scLRSomatoDev is a powerful Shiny application designed to explore and analyze li
 * Explore gene expression patterns and LR interactions at any developmental stage
 * Predict and analyze LR interactions between different neuronal cell types
 
-### Availability
+### Citation
 
-We provide multiple installation options to suit your needs:
-
-* online for quick and easy use (limited to one user currently)
-* Local installation via RStudio
-* Docker container for reproducible environments
+**If you use scLRSomatoDev in your research, please cite our [paper](https://www.biorxiv.org/content/10.1101/2024.09.02.610245v3):** 
+Rémi Mathieu, Léa Corbières, Tangra Draia-Nicolau, Annousha Govindan, Vianney Bensa, Emilie Pallesi-Pocachard, Lucas Silvagnoli, Alfonso Represa, Carlos Cardoso, Ludovic Telley, Antoine de Chevigny. ***Inferring Ligand-Receptor Interactions between neuronal subtypes during mouse cortical development.*** <em>bioRxiv</em>
 
 ## Table of Contents
 
