@@ -77,7 +77,7 @@ shinyServer(function(input, output, session) {
             session = session,
             inputId = "Dim_red",
             choices = c("UMAP_2D", "UMAP_3D", "tSNE_2D", "tSNE_3D", "PCA_2D", "PCA_3D", "ICA_2D", "ICA_3D"),
-            selected = "UMAP_3D"
+            selected = "UMAP_2D"
         )
     })
     
@@ -1103,10 +1103,21 @@ shinyServer(function(input, output, session) {
     # render a data table in the output table named output$table_LRDB
     output$table_LRDB <- renderDT(
         LRintercellNetworkDB, rownames=F,
-        filter = "top",
-        options = list(pageLength = 10, lengthMenu=c(10,20,50,100,500))
+        filter = "top", extensions = c('Buttons'),
+        options = list(pageLength = 10,
+                       lengthMenu=c(10,20,50,100,500),
+                       buttons = list(
+                         list(
+                           extend = 'collection',
+                           buttons = list(
+                             list(extend = 'csv', filename = "LR Metadata"),
+                             list(extend = 'excel', filename = "LR Metadata")),
+                           text = 'Download' )
+                       )
+          )
         
     )
+  
     
     ########### Ligand & Receptor family ##########
     
