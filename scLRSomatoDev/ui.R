@@ -1350,27 +1350,12 @@ shinyUI(
                 ## tab to show an image of the ligand-receptor category
                 tabPanel("Ligand & Receptor category", fluidPage(div(img(src="Ligand_Recptor_category_LRintercellNetworkDB.png", width=1782, height=1347, align="center"), style="text-align: center;"))),
 
-                ## tab to show a plot of the ligand-receptor families
-                tabPanel("Ligand & Receptor family", varSelectInput(inputId = "LRfamily_var", label= "Select Ligand or Receptor family:", data=LRintercellNetworkDB[,7:8]),
-                     (div
-                     
-                        ## Plot area
-                        (style='width:100%;height:950px; overflow-y: scroll; position: relative',
-                        
-                        ## Render the plot
-                        shinycssloaders::withSpinner(
-                        plotlyOutput(outputId = "LRfamily"),
-                        color = "#02E7B9", 
-                        type = 3, 
-                        color.background = "white", 
-                        size = 1.5,
-                        caption = div(strong("Rendering Your Plot"), br(), "(Please wait, processing time depends on your machine's specifications)",
-                                      style = "font-size:20px;")
-                        )
-                        
-                                )
-                            )
-                        )
+                ## tab to show a plot of the ligand family
+                tabPanel("Ligand family", fluidPage(div(img(src="ligand_family.png", width=2887, height=20797, align="center"), style="text-align: center;"))),
+                
+                ## tab to show a plot of the receptor family
+                tabPanel("Receptor family", fluidPage(div(img(src="receptor_family.png", width=2887, height=19021, align="center"), style="text-align: center;"))),
+                
                     )
                 ),
            
@@ -1779,7 +1764,14 @@ shinyUI(
             fluidPage(
               
               titlePanel("Visualize Ligand-Receptor pairs between cell-type pairs"),
-            br(),
+              
+              br(),
+              
+              div(strong("The error message 'Faceting variables must have at least one value' indicates that no data is available for the specified time points when applying these filters."),
+                  style = "color: red;"
+              ),
+            
+              br(),  br(),
             
             sidebarLayout(
                 
