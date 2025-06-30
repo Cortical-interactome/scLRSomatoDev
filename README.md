@@ -13,93 +13,89 @@ scLRSomatoDev is a powerful Shiny application designed to explore and analyze li
 
 ### Key Features
 
-* Access detailed spatiotemporal transcriptional landscapes across neuronal subtypes
-* Explore gene expression patterns and LR interactions at any developmental stage
-* Predict and analyze LR interactions between different neuronal cell types
-
-### Citation
-
-**If you use scLRSomatoDev in your research, please cite our [paper](https://www.biorxiv.org/content/10.1101/2024.09.02.610245v3):** 
-Rémi Mathieu, Léa Corbières, Tangra Draia-Nicolau, Annousha Govindan, Vianney Bensa, Emilie Pallesi-Pocachard, Lucas Silvagnoli, Alfonso Represa, Carlos Cardoso, Ludovic Telley, Antoine de Chevigny. ***Inferring Ligand-Receptor Interactions between neuronal subtypes during mouse cortical development.*** <em>bioRxiv</em>
+*   Access detailed spatiotemporal transcriptional landscapes across neuronal subtypes.
+*   Explore gene expression patterns and LR interactions at any developmental stage.
+*   Predict and analyze LR interactions between different neuronal cell types.
 
 ### Try the Lite Version Online (TODO UPDATE THIS MESSAGE)
 
-For discovery purpose, we have set up a dedicated server running scLRSomatoDev-lite, an lightened version of the app with only a subset of the features,  that you can access online from anywhere in the world.
+For discovery purposes, we have set up a dedicated server running scLRSomatoDev-lite, a lightened version of the app with a subset of features that you can access online from anywhere in the world.
 
-1. Visit our website: [sclrsomatodev.online](http://sclrsomatodev.online/)
-
-2. Click on the "Try the Lite version!" button
-
-3. Please read the following important message:
+1.  Visit our website: [sclrsomatodev.online](http://sclrsomatodev.online/)
+2.  Click on the **"Try the Lite version!"** button.
+3.  Please read the following important message:
 
 > [!CAUTION]
-> Please note that the application page may take a few minutes to load. Your browser may display an error page at first ("no response from server"), but the app will load after a few moments. We are currently hosted on a server with limited resources, and appreciate your patience.
+> The application may take a few minutes to load. Your browser might display an error page at first ("no response from server"), but the app will load after a few moments. We are currently hosted on a server with limited resources and appreciate your patience.
 
-4. Wait for the server to load the app (this process can take several minutes as mentioned above)
+4.  Wait for the server to load the app (this can take several minutes, as mentioned above).
+5.  Once the "Overview" page appears, you're ready to start exploring!
 
-5. Once the app is loaded and the "Overview" page appears, you're ready to start using scLRSomatoDev!
+## Citation
+
+**If you use scLRSomatoDev in your research, please cite our [paper](https://www.biorxiv.org/content/10.1101/2024.09.02.610245v3):**
+
+Rémi Mathieu, Léa Corbières, Tangra Draia-Nicolau, Annousha Govindan, Vianney Bensa, Emilie Pallesi-Pocachard, Lucas Silvagnoli, Alfonso Represa, Carlos Cardoso, Ludovic Telley, Antoine de Chevigny. ***Inferring Ligand-Receptor Interactions between neuronal subtypes during mouse cortical development.*** *bioRxiv*.
 
 ## Table of Contents
 
-1. [Getting Started](#getting-started)
-   * [Minimum System Requirements](#minimum-system-requirements)
-   * [Download Required Files](#download-required-files)
-2. [Run scLRSomatoDev](#run-sclrsomatodev)
-   * [Using Docker](#using-docker)
-   * [Using RStudio](#using-rstudio)
-  
-4. [Contact us](#contact-us)
+1.  [Getting Started](#getting-started)
+    *   [System Requirements](#system-requirements)
+    *   [Installation](#installation)
+2.  [How to Run](#how-to-run)
+    *   [Option 1: Docker (Recommended)](#option-1-docker-recommended)
+    *   [Option 2: RStudio](#option-2-rstudio)
+3.  [Contact Us](#contact-us)
 
-## Prerequisites
+## Getting Started
 
-### Minimum System Requirements
+### System Requirements
 
-  * Processor: 8+ cores (Intel/AMD)
-  * Memory: 32GB RAM (64GB recommended for Docker)
-  * Storage: 50GB+ free space
-  * Display: 1920 x 1080 resolution or Higher
-  * Operating System: Windows 10/11 (64-bit), macOS 10.15+, or Ubuntu 20.04+
+*   **Processor**: 8+ cores (Intel/AMD)
+*   **Memory**: 32GB RAM (64GB recommended for Docker)
+*   **Storage**: 50GB+ free space
+*   **Display**: 1920 x 1080 resolution or higher
+*   **Operating System**: Windows 10/11 (64-bit), macOS 10.15+, or Ubuntu 20.04+
 
-### Download Required Files
+### Installation
 
-1. **Download the project files**:
-   * Click on the "Code" tab
-   * Select "Download ZIP"
-   * Extract the contents of the ZIP file to your desired location
+1.  **Download the project files**:
+    *   Navigate to the "Code" tab on the GitHub repository page.
+    *   Select "Download ZIP".
+    *   Extract the contents of the ZIP file to your desired location.
 
-2. **Download the required data**:
-   * Visit our [Zenodo repository](https://github.com/Cortical-interactome/scLRSomatoDev/) (TODO: Finish Zenodo Repo + add URL)
-   * Download the `data.zip` file
-   * Extract the contents into your scLRSomatoDev folder
-   * Verify your folder structure matches the following :
+2.  **Download the required data**:
+    *   Visit our [Zenodo repository](https://github.com/Cortical-interactome/scLRSomatoDev/) (TODO: Finish Zenodo Repo + add URL).
+    *   Download the `data.zip` file.
+    *   Extract its contents into your `scLRSomatoDev` folder.
+    *   Verify that your folder structure matches the following:
 
     <p align="center">
     <br>
       <img width="600" src="images/Folder_structure.png" alt="Folder_structure">
     </p>
 
-## Run scLRSomatoDev
+## How to Run
 
-### Using Docker (Recommanded)
+### Option 1: Docker (Recommended)
 
 #### Prerequisites
 
-* **Docker**: If you don't have Docker installed, please [download and install it](https://www.docker.com/products/docker-desktop/) before proceeding.
+*   **Docker**: If you don't have Docker installed, please [download and install it](https://www.docker.com/products/docker-desktop/) before proceeding.
 
-### Building the Docker image
+#### 1. Build the Docker Image
 
-To build the docker image, open your terminal application in the directory where the copied GitHub folder is located (the root must be the folder containing scLRSomatoDev folder and the Dockerfile) and run:
+Open your terminal, navigate to the project's root directory (the one containing the `Dockerfile`), and run:
 
 ```bash
 docker build -t sclrshiny .
 ```
-The initial image build will take some time as it needs to download and install all the required R packages (about 20 min). Subsequent builds will be much faster.
 
-### Running the Docker container
+The initial build may take around 20 minutes to download and install the required R packages. Subsequent builds will be much faster.
 
-To create a local container from the previous built image run:
+#### 2. Run the Docker Container
 
-To create a local container from the image you just built, run the appropriate command for your system from the root directory of the project:
+To create a local container from the image you just built, run the appropriate command for your system from the project's root directory:
 
 **On Linux or macOS:**
 ```bash
@@ -116,28 +112,24 @@ docker run --rm -p 3838:3838 -v "%cd%\scLRSomatoDev\Data:/app/Data" sclrshiny
 docker run --rm -p 3838:3838 -v "${PWD}\scLRSomatoDev\Data:/app/Data" sclrshiny
 ```
 
-This command mounts your local `scLRSomatoDev/Data` directory into the `/app/Data` directory inside the container, where the Shiny app expects to find it.
+This command mounts your local `scLRSomatoDev/Data` directory to the `/app/Data` directory inside the container, which is where the app expects to find the data.
 
-### Launching the app in a web browser
+#### 3. Launch the App
 
 After running the command, your terminal will display:
-
-```bash
+```
 Listening on http://0.0.0.0:3838
 ```
+The app will be available at http://localhost:3838. It may take a few moments to load.
 
-The app will be up and running at http://localhost:3838. The shiny app scLRSomatoDev should be displayed after few minutes.
 > [!NOTE]
-> You do not have to go through all these steps each time to launch the scLRSomatoDev shiny app. **You have to build the image only the first time**.
->
-> For all subsequent times, you just have to **run the Docker image and copy the link to your web browser**.
+> You only need to **build the image once**. For future use, you can simply **run the container** and open the link in your web browser.
 
-### Using RStudio
+### Option 2: RStudio
 
 #### Prerequisites
-* **R** : The app has been tested with R versions 4.3.2 and 4.2. If you do not have R installed, please [download and install it](https://pbil.univ-lyon1.fr/CRAN/) before proceeding.
-* **RStudio**: If RStudio is not installed, please [download and install it](https://posit.co/download/rstudio-desktop/) before proceeding.
-* **Conda**: Ensure Conda is installed on your system. If not, please [download and install Anaconda Or Miniconda](https://www.anaconda.com/download/success) before proceeding.
+*   **R**: The app has been tested with R versions 4.2 and 4.3. If you don't have R, please [download and install it](https://pbil.univ-lyon1.fr/CRAN/) first.
+*   **RStudio**: If RStudio is not installed, please [download and install it](https://posit.co/download/rstudio-desktop/) before proceeding.
 
 #### Setup Instructions
 
@@ -157,25 +149,18 @@ The app will be up and running at http://localhost:3838. The shiny app scLRSomat
     ```{r}
     install.packages(c("shiny", "tidyverse", "Seurat", "ggplot2", "dplyr", "tidyr"))
     ```
-  
-5. To run the Shiny app, click the 'Run' or 'Play' button in either the ui.r or server.r file or run the following command : 
-    ```{r}
-    shiny::runApp("app.R")
-    ```
 
-6. The app will launch either in your default web browser or in the RStudio dedicated window.
+4.  The app will launch in either your default web browser or a dedicated RStudio window.
 
-## Contact us
+## Contact Us
 
-* **Technical Support & Bug Reports**
-  * Create an issue on our [GitHub repository](https://github.com/yourusername/scLRSomatoDev/issues)
-  * Include detailed steps to reproduce any problems
+*   **Technical Support & Bug Reports**
+    *   Create an issue on our [GitHub repository](https://github.com/Cortical-interactome/scLRSomatoDev/issues).
+    *   Please include detailed steps to reproduce the problem.
 
-* **General Inquiries**
-  * Email: [support@sclrsomatodev.online](mailto:support@sclrsomatodev.online)
-  * Response time: Usually within 2 business days
+*   **General Inquiries**
+    *   Email: [support@sclrsomatodev.online](mailto:support@sclrsomatodev.online)
+    *   We typically respond within two business days.
 
 > [!NOTE]
-> For faster response, please include your operating system, Usage method (Online/RStudio/Docker), and any relevant error messages.
-
-
+> For a faster response, please include your operating system, usage method (Online/RStudio/Docker), and any relevant error messages.
