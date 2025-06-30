@@ -2,7 +2,7 @@
 FROM rocker/shiny:4.3.2
 
 # system libraries of general use
-## install debian packages
+## install debian packages and update system libraries in a single layer
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     libxml2-dev \
     libcairo2-dev \
@@ -19,27 +19,25 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     patch \
     libudunits2-dev \
     libproj-dev \
-    libglu1-mesa
+    libglu1-mesa \
+    && apt-get upgrade -y \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
-## update system libraries
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get clean
-
-# install renv & restore packages
-RUN R -e "install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))"
+# install renv & restore packages in a single layer
 WORKDIR /project
 COPY renv.lock renv.lock
-ENV RENV_PATHS_LIBRARY renv/library
-RUN R -e "renv::restore()"
-RUN R -e "install.packages('markdown', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+ENV RENV_PATHS_LIBRARY=renv/library
+RUN R -e "install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))" && \
+    R -e "renv::restore()" && \
+    R -e "install.packages('markdown', dependencies=TRUE, repos='http://cran.rstudio.com/')"
 
 # copy necessary files
 ## app folder
-COPY /scLRSomatoDev ./app
+COPY scLRSomatoDev/ ./app
 
 # expose port
 EXPOSE 3838
 
-# run app on container start
+# run app on container start with fixed syntax
 CMD ["R", "-e", "shiny::runApp('/app', host = '0.0.0.0', port = 3838)"]
