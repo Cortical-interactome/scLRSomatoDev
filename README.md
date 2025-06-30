@@ -50,7 +50,7 @@ For discovery purpose, we have set up a dedicated server running scLRSomatoDev-l
   
 4. [Contact us](#contact-us)
 
-## Getting Started
+## Prerequisites
 
 ### Minimum System Requirements
 
@@ -86,25 +86,47 @@ For discovery purpose, we have set up a dedicated server running scLRSomatoDev-l
 
 * **Docker**: If you don't have Docker installed, please [download and install it](https://www.docker.com/products/docker-desktop/) before proceeding.
 
-#### Setup Instructions (TODO UPDATE THE RUN COMMAND TO USE VOLUME TO LOAD DATA)
+### Building the Docker image
 
-1. Build the Docker image:
-    ```{bash}
-    docker build -t sclrshiny .
-    ```
-    The Docker image build process takes approximately 50 minutes, depending on your system.
+To build the docker image, open your terminal application in the directory where the copied GitHub folder is located (the root must be the folder containing scLRSomatoDev folder and the Dockerfile) and run:
 
-3. Run the Docker container:
-    ```{bash}
-    docker run --rm -p 3838:3838 -v "/path/to/folder:/app" sclrshiny
-    ```
-    Replace "path/to/folder" with the path where your Data and www folders are located. For example, if the folders are located in "/home/user/Documents/Data_scLRSomatoDev", run:
-    ```{bash}
-    docker run --rm -p 3838:3838 -v "/home/user/Documents/Data_scLRSomatoDev:/app" sclrshiny
-    ```
+```bash
+docker build -t sclrshiny .
+```
+The initial image build will take some time as it needs to download and install all the required R packages (about 20 min). Subsequent builds will be much faster.
 
-4. The app will be available at http://localhost:3838 after a few minutes.
+### Running the Docker container
 
+To create a local container from the previous built image run:
+
+To create a local container from the image you just built, run the appropriate command for your system from the root directory of the project:
+
+**On Linux or macOS:**
+```bash
+docker run --rm -p 3838:3838 -v "$(pwd)/scLRSomatoDev/Data:/app/Data" sclrshiny
+```
+
+**On Windows (Command Prompt):**
+```bash
+docker run --rm -p 3838:3838 -v "%cd%\scLRSomatoDev\Data:/app/Data" sclrshiny
+```
+
+**On Windows (PowerShell):**
+```bash
+docker run --rm -p 3838:3838 -v "${PWD}\scLRSomatoDev\Data:/app/Data" sclrshiny
+```
+
+This command mounts your local `scLRSomatoDev/Data` directory into the `/app/Data` directory inside the container, where the Shiny app expects to find it.
+
+### Launching the app in a web browser
+
+After running the command, your terminal will display:
+
+```bash
+Listening on http://0.0.0.0:3838
+```
+
+The app will be up and running at http://localhost:3838. The shiny app scLRSomatoDev should be displayed after few minutes.
 > [!NOTE]
 > You do not have to go through all these steps each time to launch the scLRSomatoDev shiny app. **You have to build the image only the first time**.
 >
