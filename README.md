@@ -17,35 +17,26 @@ scLRSomatoDev is a powerful Shiny application designed to explore and analyze li
 *   Explore gene expression patterns and LR interactions at any developmental stage.
 *   Predict and analyze LR interactions between different neuronal cell types.
 
-### Try the Lite Version Online (TODO UPDATE THIS MESSAGE)
-
-For discovery purposes, we have set up a dedicated server running scLRSomatoDev-lite, a lightened version of the app with a subset of features that you can access online from anywhere in the world.
-
-1.  Visit our website: [sclrsomatodev.online](http://sclrsomatodev.online/)
-2.  Click on the **"Try the Lite version!"** button.
-3.  Please read the following important message:
-
-> [!CAUTION]
-> The application may take a few minutes to load. Your browser might display an error page at first ("no response from server"), but the app will load after a few moments. We are currently hosted on a server with limited resources and appreciate your patience.
-
-4.  Wait for the server to load the app (this can take several minutes, as mentioned above).
-5.  Once the "Overview" page appears, you're ready to start exploring!
-
 ## Citation
 
 **If you use scLRSomatoDev in your research, please cite our [paper](https://www.biorxiv.org/content/10.1101/2024.09.02.610245v3):**
 
 Rémi Mathieu, Léa Corbières, Tangra Draia-Nicolau, Annousha Govindan, Vianney Bensa, Emilie Pallesi-Pocachard, Lucas Silvagnoli, Alfonso Represa, Carlos Cardoso, Ludovic Telley, Antoine de Chevigny. ***Inferring Ligand-Receptor Interactions between neuronal subtypes during mouse cortical development.*** *bioRxiv*.
 
-## Table of Contents
+<br>
 
-1.  [Getting Started](#getting-started)
-    *   [System Requirements](#system-requirements)
-    *   [Installation](#installation)
-2.  [How to Run](#how-to-run)
-    *   [Option 1: Docker (Recommended)](#option-1-docker-recommended)
-    *   [Option 2: RStudio](#option-2-rstudio)
-3.  [Contact Us](#contact-us)
+### 🚀 Try a lite version of scLRSomatoDev Online!
+
+Explore a lite, feature-focused version of our app directly in your browser—no installation required.
+
+1.  Go to [sclrsomatodev.online](http://sclrsomatodev.online/) and click the **"Try the Lite version!"** button.
+2.  **Please be patient while the app loads.** This process can take several minutes, and your browser may temporarily display an error message.
+3.  Once the "Overview" page appears, you're ready to start exploring!
+
+> [!NOTE]
+> We are currently hosted on a server with limited resources. We appreciate your understanding as we work to improve performance.
+
+<br>
 
 ## Getting Started
 
@@ -56,8 +47,6 @@ Rémi Mathieu, Léa Corbières, Tangra Draia-Nicolau, Annousha Govindan, Vianney
 *   **Storage**: 50GB+ free space
 *   **Display**: 1920 x 1080 resolution or higher
 *   **Operating System**: Windows 10/11 (64-bit), macOS 10.15+, or Ubuntu 20.04+
-
-### Installation
 
 ### Installation
 
@@ -163,6 +152,8 @@ The app will be available at http://localhost:3838. It may take a few moments to
     ```
 
 4.  The app will launch in either your default web browser or a dedicated RStudio window.
+
+<br>
 
 ## Contact Us
 
