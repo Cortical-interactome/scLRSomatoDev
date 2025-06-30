@@ -1,0 +1,24 @@
+# Docker files
+Dockerfile
+.dockerignore
+Docker_build_logs.txt
+
+# Git
+.git
+.gitignore
+
+# R and renv
+.Rhistory
+.RData
+.Rproj.user
+renv/
+scLRSomatoDev/app_cache/
+
+# Exclude the large data directory from the build context.
+# It will be mounted as a volume at runtime.
+scLRSomatoDev/Data/
+scLRSomatoDev/Data.zip
+
+# OS-specific files
+.DS_Store
+Thumbs.db 
