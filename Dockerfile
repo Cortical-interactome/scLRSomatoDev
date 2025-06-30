@@ -32,9 +32,12 @@ RUN R -e "install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org
     R -e "renv::restore()" && \
     R -e "install.packages('markdown', dependencies=TRUE, repos='http://cran.rstudio.com/')"
 
-# copy necessary files
-## app folder
-COPY scLRSomatoDev/ ./app
+# copy necessary files into the /app directory
+WORKDIR /app
+COPY scLRSomatoDev/server.R .
+COPY scLRSomatoDev/ui.R .
+COPY scLRSomatoDev/utils.R .
+COPY scLRSomatoDev/www ./www
 
 # expose port
 EXPOSE 3838
