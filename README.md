@@ -22,16 +22,33 @@ scLRSomatoDev is a powerful Shiny application designed to explore and analyze li
 **If you use scLRSomatoDev in your research, please cite our [paper](https://www.biorxiv.org/content/10.1101/2024.09.02.610245v3):** 
 Rémi Mathieu, Léa Corbières, Tangra Draia-Nicolau, Annousha Govindan, Vianney Bensa, Emilie Pallesi-Pocachard, Lucas Silvagnoli, Alfonso Represa, Carlos Cardoso, Ludovic Telley, Antoine de Chevigny. ***Inferring Ligand-Receptor Interactions between neuronal subtypes during mouse cortical development.*** <em>bioRxiv</em>
 
+### Try the Lite Version Online (TODO UPDATE THIS MESSAGE)
+
+For discovery purpose, we have set up a dedicated server running scLRSomatoDev-lite, an lightened version of the app with only a subset of the features,  that you can access online from anywhere in the world.
+
+1. Visit our website: [sclrsomatodev.online](http://sclrsomatodev.online/)
+
+2. Click on the "Try the Lite version!" button
+
+3. Please read the following important message:
+
+> [!CAUTION]
+> Please note that the application page may take a few minutes to load. Your browser may display an error page at first ("no response from server"), but the app will load after a few moments. We are currently hosted on a server with limited resources, and appreciate your patience.
+
+4. Wait for the server to load the app (this process can take several minutes as mentioned above)
+
+5. Once the app is loaded and the "Overview" page appears, you're ready to start using scLRSomatoDev!
+
 ## Table of Contents
 
 1. [Getting Started](#getting-started)
    * [Minimum System Requirements](#minimum-system-requirements)
    * [Download Required Files](#download-required-files)
 2. [Run scLRSomatoDev](#run-sclrsomatodev)
-   * [Using the Online Version](#using-the-online-version)
-   * [Using RStudio](#using-rstudio)
    * [Using Docker](#using-docker)
-3. [Contact us](#contact-us)
+   * [Using RStudio](#using-rstudio)
+  
+4. [Contact us](#contact-us)
 
 ## Getting Started
 
@@ -63,22 +80,35 @@ Rémi Mathieu, Léa Corbières, Tangra Draia-Nicolau, Annousha Govindan, Vianney
 
 ## Run scLRSomatoDev
 
-### Using the Online Version
+### Using Docker (Recommanded)
 
-For easy use, we have set up a dedicated server running scLRSomatoDev that you can access online from anywhere in the world.
+#### Prerequisites
 
-1. Visit our website: [sclrsomatodev.online](http://sclrsomatodev.online/)
+* **Docker**: If you don't have Docker installed, please [download and install it](https://www.docker.com/products/docker-desktop/) before proceeding.
 
-2. Click on the "Try the app now!" button
+#### Setup Instructions (TODO UPDATE THE RUN COMMAND TO USE VOLUME TO LOAD DATA)
 
-3. Please read the following important message:
+1. Build the Docker image:
+    ```{bash}
+    docker build -t sclrshiny .
+    ```
+    The Docker image build process takes approximately 50 minutes, depending on your system.
 
-> [!CAUTION]
-> Please note that the application page may take a few minutes to load. Your browser may display an error page at first ("no response from server"), but the app will load after a few moments. We are currently hosted on a server with limited resources, and appreciate your patience.
+3. Run the Docker container:
+    ```{bash}
+    docker run --rm -p 3838:3838 -v "/path/to/folder:/app" sclrshiny
+    ```
+    Replace "path/to/folder" with the path where your Data and www folders are located. For example, if the folders are located in "/home/user/Documents/Data_scLRSomatoDev", run:
+    ```{bash}
+    docker run --rm -p 3838:3838 -v "/home/user/Documents/Data_scLRSomatoDev:/app" sclrshiny
+    ```
 
-4. Wait for the server to load the app (this process can take several minutes as mentioned above)
+4. The app will be available at http://localhost:3838 after a few minutes.
 
-5. Once the app is loaded and the "Overview" page appears, you're ready to start using scLRSomatoDev!
+> [!NOTE]
+> You do not have to go through all these steps each time to launch the scLRSomatoDev shiny app. **You have to build the image only the first time**.
+>
+> For all subsequent times, you just have to **run the Docker image and copy the link to your web browser**.
 
 ### Using RStudio
 
@@ -112,36 +142,6 @@ For easy use, we have set up a dedicated server running scLRSomatoDev that you c
     ```
 
 6. The app will launch either in your default web browser or in the RStudio dedicated window.
-
-### Using Docker
-
-#### Prerequisites
-
-* **Docker**: If you don't have Docker installed, please [download and install it](https://www.docker.com/products/docker-desktop/) before proceeding.
-
-#### Setup Instructions
-
-1. Build the Docker image:
-    ```{bash}
-    docker build -t sclrshiny .
-    ```
-    The Docker image build process takes approximately 50 minutes, depending on your system.
-
-3. Run the Docker container:
-    ```{bash}
-    docker run --rm -p 3838:3838 -v "/path/to/folder:/app" sclrshiny
-    ```
-    Replace "path/to/folder" with the path where your Data and www folders are located. For example, if the folders are located in "/home/user/Documents/Data_scLRSomatoDev", run:
-    ```{bash}
-    docker run --rm -p 3838:3838 -v "/home/user/Documents/Data_scLRSomatoDev:/app" sclrshiny
-    ```
-
-4. The app will be available at http://localhost:3838 after a few minutes.
-
-> [!NOTE]
-> You do not have to go through all these steps each time to launch the scLRSomatoDev shiny app. **You have to build the image only the first time**.
->
-> For all subsequent times, you just have to **run the Docker image and copy the link to your web browser**.
 
 ## Contact us
 
