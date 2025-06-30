@@ -59,10 +59,22 @@ Rémi Mathieu, Léa Corbières, Tangra Draia-Nicolau, Annousha Govindan, Vianney
 
 ### Installation
 
-1.  **Download the project files**:
-    *   Navigate to the "Code" tab on the GitHub repository page.
-    *   Select "Download ZIP".
-    *   Extract the contents of the ZIP file to your desired location.
+### Installation
+
+1.  **Get the project files**:
+
+    You can get the files using one of the following methods:
+
+    *   **Option A: Download ZIP**
+        *   Navigate to the "Code" tab on the GitHub repository page.
+        *   Select "Download ZIP".
+        *   Extract the contents of the ZIP file to your desired location.
+
+    *   **Option B: Git Clone**
+        *   Open your terminal and run the following command:
+            ```bash
+            git clone https://github.com/Cortical-interactome/scLRSomatoDev.git
+            ```
 
 2.  **Download the required data**:
     *   Visit our [Zenodo repository](https://github.com/Cortical-interactome/scLRSomatoDev/) (TODO: Finish Zenodo Repo + add URL).
