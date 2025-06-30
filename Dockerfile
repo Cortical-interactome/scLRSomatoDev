@@ -30,7 +30,7 @@ COPY renv.lock renv.lock
 ENV RENV_PATHS_LIBRARY=renv/library
 RUN R -e "install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))" && \
     R -e "renv::restore()" && \
-    R -e "install.packages('markdown', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+    R -e "install.packages(c('markdown', 'rbibutils'), dependencies=TRUE, repos='http://cran.rstudio.com/')"
 
 # copy necessary files into the /app directory
 WORKDIR /app
