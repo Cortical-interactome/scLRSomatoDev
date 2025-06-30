@@ -1351,10 +1351,10 @@ shinyUI(
                 tabPanel("Ligand & Receptor category", fluidPage(div(img(src="Ligand_Recptor_category_LRintercellNetworkDB.png", width=1782, height=1347, align="center"), style="text-align: center;"))),
 
                 ## tab to show a plot of the ligand family
-                tabPanel("Ligand family", fluidPage(div(img(src="ligand_family.png", width=2887, height=20797, align="center"), style="text-align: center;"))),
+                tabPanel("Ligand family", fluidPage(div(img(src="ligand_family.png", width=1782, height=12837, align="center"), style="text-align: center;"))),
                 
                 ## tab to show a plot of the receptor family
-                tabPanel("Receptor family", fluidPage(div(img(src="receptor_family.png", width=2887, height=19021, align="center"), style="text-align: center;"))),
+                tabPanel("Receptor family", fluidPage(div(img(src="receptor_family.png", width=1782, height=11741, align="center"), style="text-align: center;"))),
                 
                     )
                 ),
