@@ -43,7 +43,7 @@ Explore a lite, feature-focused version of our app directly in your browser—no
 ### System Requirements
 
 *   **Processor**: 8+ cores (Intel/AMD)
-*   **Memory**: 32GB RAM (64GB recommended for Docker)
+*   **Memory**: 32GB RAM minimum
 *   **Storage**: 50GB+ free space
 *   **Display**: 1920 x 1080 resolution or higher
 *   **Operating System**: Windows 10/11 (64-bit), macOS 10.15+, or Ubuntu 20.04+
