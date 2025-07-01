@@ -88,8 +88,14 @@ Explore a lite, feature-focused version of our app directly in your browser—no
 
 Open your terminal, navigate to the project's root directory (the one containing the `Dockerfile`), and run:
 
+**On Linux, Windows and macOS (Intel/AMD):**
 ```bash
 docker build -t sclrshiny .
+```
+
+**On macOS (Apple Silicon):**
+```bash
+docker buildx build --platform linux/amd64 -t sclrshiny .
 ```
 
 The initial build may take around 20 minutes to download and install the required R packages. Subsequent builds will be much faster.
