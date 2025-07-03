@@ -1767,7 +1767,7 @@ shinyUI(
               
               br(),
               
-              div(strong("The error message 'Faceting variables must have at least one value' indicates that no data is available for the specified time points when applying these filters."),
+              div(strong("The error message 'Faceting variables must have at least one value' indicates that no significant expression of the ligand, the receptor or both are found for the specific time points when applying these filters"),
                   style = "color: red;"
               ),
             
