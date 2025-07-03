@@ -153,11 +153,11 @@ The app will be available at http://localhost:3838. It may take a few moments to
 3. Open RStudio and set the working directory to the scLRSomatoDev folder.
 
 4. Install the required R packages if they are not already installed:
+
     ```{r}
     install.packages(c("shiny", "tidyverse", "Seurat", "ggplot2", "dplyr", "tidyr"))
     ```
-
-4.  The app will launch in either your default web browser or a dedicated RStudio window.
+TODO : ADD FULL COMMAND FOR MISSING PACKAGES + ADD RUN indication
 
 <br>
 
