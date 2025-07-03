@@ -2635,7 +2635,7 @@ shinyServer(function(input, output, session) {
       # Description: An eventReactive function  to filter a dataset based on various user-selected inputs and return the filtered dataset. 
       # --------------------------------------------------
 
-    P0_LRpairs_filter <- eventReactive(input$"Cortex_LRpairs_button",{
+    P0_LRpairs_filter <- eventReactive(input$"Cortex_LRsetting_button",{
 
       # Filter the data using data.table syntax
       mydata <- Cortex_edges_sig.list$`E18.5-P0`[Ligand.category1 %in% req(input$"Cortex_LRpairs_Ligand.category")  |
@@ -2714,7 +2714,7 @@ shinyServer(function(input, output, session) {
       # Output: The filtered ligand-receptor interaction data
       # --------------------------------------------------
     
-    LRDB_mouse_LRpairs <- eventReactive(input$"Cortex_LRpairs_button",{
+    LRDB_mouse_LRpairs <- eventReactive(input$"Cortex_LRsetting_button",{
 
        # Filter the data from the 'LRintercellNetworkDB' data frame based on various user-selected inputs
       myLRdata <-  LRintercellNetworkDB[which( LRintercellNetworkDB$ligand_receptor %in% req(input$"Cortex_LRpairs_LR")   &
@@ -2751,7 +2751,7 @@ shinyServer(function(input, output, session) {
       # Description: An eventReactive function  to filter a dataset based on various user-selected inputs and return the filtered dataset. 
       # --------------------------------------------------
 
-    P2_LRpairs_filter <- eventReactive(input$"Cortex_LRpairs_button",{
+    P2_LRpairs_filter <- eventReactive(input$"Cortex_LRsetting_button",{
       # Filter the data using data.table syntax
       mydata <- Cortex_edges_sig.list$`P1-P2`[Ligand.category1 %in% req(input$"Cortex_LRpairs_Ligand.category")  |
                         Ligand.category2  %in% req(input$"Cortex_LRpairs_Ligand.category") |
@@ -2804,7 +2804,6 @@ shinyServer(function(input, output, session) {
                          S_inter_diff >= req(input$"Cortex_LRpairs_S_inter_diff")]
     }, ignoreNULL = FALSE)
     
-    
     # --------------------------------------------------
     # Description: Render a heatmap plot using the 'scSeqComm_heatmaply' function for the filtered ligand-receptor interaction data
     # Output: A plotly heatmap plot displayed in the Shiny app UI
@@ -2848,7 +2847,7 @@ shinyServer(function(input, output, session) {
       # Description: An eventReactive function  to filter a dataset based on various user-selected inputs and return the filtered dataset. 
       # --------------------------------------------------
 
-    P5_LRpairs_filter <- eventReactive(input$"Cortex_LRpairs_button",{
+    P5_LRpairs_filter <- eventReactive(input$"Cortex_LRsetting_button",{
 
       # Filter the data using data.table syntax
       mydata <- Cortex_edges_sig.list$`P4-P5`[Ligand.category1 %in% req(input$"Cortex_LRpairs_Ligand.category")  |
@@ -2945,7 +2944,7 @@ shinyServer(function(input, output, session) {
       # Description: An eventReactive function  to filter a dataset based on various user-selected inputs and return the filtered dataset. 
       # --------------------------------------------------
 
-    P8_LRpairs_filter <- eventReactive(input$"Cortex_LRpairs_button",{
+    P8_LRpairs_filter <- eventReactive(input$"Cortex_LRsetting_button",{
 
       # Filter the data using data.table syntax
       mydata <- Cortex_edges_sig.list$P8[Ligand.category1 %in% req(input$"Cortex_LRpairs_Ligand.category")  |
@@ -3041,7 +3040,7 @@ shinyServer(function(input, output, session) {
       # Description: An eventReactive function  to filter a dataset based on various user-selected inputs and return the filtered dataset. 
       # --------------------------------------------------
 
-    P16_LRpairs_filter <- eventReactive(input$"Cortex_LRpairs_button",{
+    P16_LRpairs_filter <- eventReactive(input$"Cortex_LRsetting_button",{
 
       # Filter the data using data.table syntax
       mydata <- Cortex_edges_sig.list$P16[Ligand.category1 %in% req(input$"Cortex_LRpairs_Ligand.category")  |
@@ -3137,7 +3136,7 @@ shinyServer(function(input, output, session) {
       # Description: An eventReactive function  to filter a dataset based on various user-selected inputs and return the filtered dataset. 
       # --------------------------------------------------
 
-    P30_LRpairs_filter <- eventReactive(input$"Cortex_LRpairs_button",{
+    P30_LRpairs_filter <- eventReactive(input$"Cortex_LRsetting_button",{
 
       # Filter the data using data.table syntax
       mydata <- Cortex_edges_sig.list$P30[Ligand.category1 %in% req(input$"Cortex_LRpairs_Ligand.category")  |
@@ -3197,6 +3196,7 @@ shinyServer(function(input, output, session) {
     # --------------------------------------------------
     
     output$P30_LRpairs <- renderPlotly({
+      
       input$"Cortex_LRsetting_button"
       
       # Create a heatmap plot using the filtered data from 'P30_LRpairs_filter()' and various user-selected inputs
@@ -3233,7 +3233,7 @@ shinyServer(function(input, output, session) {
       # Description: An eventReactive function  to filter a dataset based on various user-selected inputs and return the filtered dataset. 
       # --------------------------------------------------
 
-    Adult_LRpairs_filter <- eventReactive(input$"Cortex_LRpairs_button",{
+    Adult_LRpairs_filter <- eventReactive(input$"Cortex_LRsetting_button",{
 
       # Filter the data using data.table syntax
       mydata <- Cortex_edges_sig.list$Adult[Ligand.category1 %in% req(input$"Cortex_LRpairs_Ligand.category")  |
