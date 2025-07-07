@@ -140,24 +140,65 @@ The app will be available at http://localhost:3838. It may take a few moments to
 
 #### Setup Instructions
 
-1. Create a conda environment using the provided environment file:
-    ```{bash}
-    conda env create -f environment_scLRSomatoDev.yml
-    ```
+#### 1. Create a conda environment using the provided environment file:
 
-2. Activate the environment:
-    ```{bash}
-    conda activate r_env
-    ```
+```{bash}
+conda env create -f environment_scLRSomatoDev.yml
+```
 
-3. Open RStudio and set the working directory to the scLRSomatoDev folder.
+#### 2. Activate the environment:
 
-4. Install the required R packages if they are not already installed:
+```{bash}
+conda activate r_env
+```
 
-    ```{r}
-    install.packages(c("shiny", "tidyverse", "Seurat", "ggplot2", "dplyr", "tidyr"))
-    ```
-TODO : ADD FULL COMMAND FOR MISSING PACKAGES + ADD RUN indication
+#### 3. Open RStudio and set the working directory to the scLRSomatoDev folder.
+
+**TODO : ADD FULL COMMAND FOR MISSING PACKAGES + ADD RUN indication**
+
+#### 4. Install the required R packages if they are not already installed:
+
+Since R can be tricky when managing dependencies, we have included a list of packages in the `environment_scLRSomatoDev.yml` file.
+
+* If you encounter an error, you may need to install the missing R packages. You can do this by running the following commands in the console:
+
+for a single specific package:
+
+```r
+install.packages("package_name")
+```
+for multiple packages:
+
+```r
+install.packages(c("package_name1", "package_name2", "package_name3"))
+```
+some packages might not be available on CRAN, you can install them from Bioconductor or github using the following command:
+
+for Bioconductor packages:
+
+```r
+BiocManager::install("package_name")
+```
+
+for github packages:
+
+```r
+remotes::install_github("username/repo")
+```
+
+We are aware that R packages management and dependencies can be difficult. If you cannot find the package you need, you can ask for help on the [issues](https://github.com/Cortical-interactome/scLRSomatoDev/issues) page.
+
+If you encounter any issues, you can ask for help on the [issues](https://github.com/Cortical-interactome/scLRSomatoDev/issues) page
+
+#### 5. Run the app  :
+
+To launch the application from RStudio, open either the `ui.R` or `server.R` file and click the "Run App" button located at the top of the file.
+
+Alternatively, you can execute the following command in the R console:
+
+```r
+shiny::runApp('Path/to/your/App/file')
+```
 
 <br>
 
