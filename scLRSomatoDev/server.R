@@ -1618,7 +1618,7 @@ shinyServer(function(input, output, session) {
     output$P0_htNinter_selectLR <- renderText({
         
 
-        paste("Your selection contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
+        paste("The LRintercellNetworkDB contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
               length(unique(P0_htNinter_filter()$LR_pair[which(P0_htNinter_filter()$cluster_L %in% req(input$"htNinter_Sending.cluster")  & 
                                                                        P0_htNinter_filter()$cluster_R %in% req(input$"htNinter_Target.cluster")  &  
                                                                        P0_htNinter_filter()$SOURCE.class %in% req(input$"htNinter_SOURCE.class")  &  
@@ -1736,7 +1736,7 @@ shinyServer(function(input, output, session) {
     output$P2_htNinter_selectLR <- renderText({
       
       
-      paste("Your selection contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
+      paste("The LRintercellNetworkDB contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
             length(unique(P2_htNinter_filter()$LR_pair[which(P2_htNinter_filter()$cluster_L %in% req(input$"htNinter_Sending.cluster")  & 
                                                                P2_htNinter_filter()$cluster_R %in% req(input$"htNinter_Target.cluster")  &  
                                                                P2_htNinter_filter()$SOURCE.class %in% req(input$"htNinter_SOURCE.class")  &  
@@ -1853,7 +1853,7 @@ shinyServer(function(input, output, session) {
     output$P5_htNinter_selectLR <- renderText({
       
       
-      paste("Your selection contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
+      paste("The LRintercellNetworkDB contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
             length(unique(P5_htNinter_filter()$LR_pair[which(P5_htNinter_filter()$cluster_L %in% req(input$"htNinter_Sending.cluster")  & 
                                                                P5_htNinter_filter()$cluster_R %in% req(input$"htNinter_Target.cluster")  &  
                                                                P5_htNinter_filter()$SOURCE.class %in% req(input$"htNinter_SOURCE.class")  &  
@@ -1970,7 +1970,7 @@ shinyServer(function(input, output, session) {
     output$P8_htNinter_selectLR <- renderText({
       
       
-      paste("Your selection contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
+      paste("The LRintercellNetworkDB contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
             length(unique(P8_htNinter_filter()$LR_pair[which(P8_htNinter_filter()$cluster_L %in% req(input$"htNinter_Sending.cluster")  & 
                                                                P8_htNinter_filter()$cluster_R %in% req(input$"htNinter_Target.cluster")  &  
                                                                P8_htNinter_filter()$SOURCE.class %in% req(input$"htNinter_SOURCE.class")  &  
@@ -2085,7 +2085,7 @@ shinyServer(function(input, output, session) {
     output$P16_htNinter_selectLR <- renderText({
       
       
-      paste("Your selection contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
+      paste("The LRintercellNetworkDB contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
             length(unique(P16_htNinter_filter()$LR_pair[which(P16_htNinter_filter()$cluster_L %in% req(input$"htNinter_Sending.cluster")  & 
                                                                P16_htNinter_filter()$cluster_R %in% req(input$"htNinter_Target.cluster")  &  
                                                                P16_htNinter_filter()$SOURCE.class %in% req(input$"htNinter_SOURCE.class")  &  
@@ -2202,7 +2202,7 @@ shinyServer(function(input, output, session) {
     output$P30_htNinter_selectLR <- renderText({
       
       
-      paste("Your selection contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
+      paste("The LRintercellNetworkDB contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
             length(unique(P30_htNinter_filter()$LR_pair[which(P30_htNinter_filter()$cluster_L %in% req(input$"htNinter_Sending.cluster")  & 
                                                                P30_htNinter_filter()$cluster_R %in% req(input$"htNinter_Target.cluster")  &  
                                                                P30_htNinter_filter()$SOURCE.class %in% req(input$"htNinter_SOURCE.class")  &  
@@ -2320,7 +2320,7 @@ shinyServer(function(input, output, session) {
     output$Adult_htNinter_selectLR <- renderText({
       
       
-      paste("Your selection contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
+      paste("The LRintercellNetworkDB contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
             length(unique(Adult_htNinter_filter()$LR_pair[which(Adult_htNinter_filter()$cluster_L %in% req(input$"htNinter_Sending.cluster")  & 
                                                                Adult_htNinter_filter()$cluster_R %in% req(input$"htNinter_Target.cluster")  &  
                                                                Adult_htNinter_filter()$SOURCE.class %in% req(input$"htNinter_SOURCE.class")  &  
@@ -2437,7 +2437,7 @@ shinyServer(function(input, output, session) {
 
     output$Cortex_htNinter_selectLR <- renderText({
       
-      paste("Your selection contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
+      paste("The LRintercellNetworkDB contains", nrow(LRDB_mouse_Hm()), "ligand-receptor pairs", "|", 
             length(unique(Cortex_htNinter_filter()$LR_pair[which(Cortex_htNinter_filter()$cluster_L %in% req(input$"htNinter_Sending.cluster")  & 
                                                                   Cortex_htNinter_filter()$cluster_R %in% req(input$"htNinter_Target.cluster")  &  
                                                                   Cortex_htNinter_filter()$SOURCE.class %in% req(input$"htNinter_SOURCE.class")  &  
