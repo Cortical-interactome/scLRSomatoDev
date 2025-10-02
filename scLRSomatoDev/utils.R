@@ -5559,7 +5559,9 @@ plotlyHm_Exprgene_byAge <- function(se_obj, tome_file ,grouping="celltype", gene
   else if(colorset=="cividis"){
     colorset =viridis_pal(option = "cividis")(10)
   }
-  
+       else if(colorset=="Purples_cb"){
+  colorset = c("#fcfbfd", "#efedf5", "#dadaeb", "#bcbddc", "#9e9ac8", "#807dba", "#6a51a3", "#54278f", "#3f007d", "#2d004b")
+}
   
   ident.class <- intersect(se_obj$class_label, ident.class) 
   ident.family <- intersect(se_obj$family_label, ident.family)
@@ -6062,6 +6064,9 @@ plotGene_Hm_pt= function(Res.list, celltype=c("Lamp5|L1 A7C/CNC"), gene = NULL, 
   else if(col_gdt=="Vik"){
     col_gdt =scico(11, palette="vik")
   }
+     else if(col_gdt=="Purples_cb"){
+  col_gdt = c("#fcfbfd", "#efedf5", "#dadaeb", "#bcbddc", "#9e9ac8", "#807dba", "#6a51a3", "#54278f", "#3f007d", "#2d004b")
+}
 
   
   
@@ -6271,6 +6276,9 @@ plotGene_Hm_pL= function(Res.list, age=c("P8"), gene = NULL, free.scale = TRUE, 
   else if(col_gdt=="Vik"){
     col_gdt =scico(11, palette="vik")
   }
+     else if(col_gdt=="Purples_cb"){
+  col_gdt = c("#fcfbfd", "#efedf5", "#dadaeb", "#bcbddc", "#9e9ac8", "#807dba", "#6a51a3", "#54278f", "#3f007d", "#2d004b")
+}
   
   #Set facet_wrap option
   if (is.na(ncol)) 
@@ -6379,6 +6387,9 @@ Plot.Tlandscape = function(celltype, col_gdt="BuRd", gene=NULL, label_pM=c("E18.
   else if(col_gdt=="Vik"){
     col_gdt =scico(11, palette="vik")
   }
+     else if(col_gdt=="Purples_cb"){
+  col_gdt = c("#fcfbfd", "#efedf5", "#dadaeb", "#bcbddc", "#9e9ac8", "#807dba", "#6a51a3", "#54278f", "#3f007d", "#2d004b")
+}
   
   
   ######## Gene selection
@@ -6753,6 +6764,9 @@ scSeqComm_heatmaply_cardinality <- function(full_data,data, y = "cluster_L", x =
   else if(col.heatmap=="cividis"){
     col.heatmap =viridis_pal(option = "cividis")(11)
   }
+    else if(col.heatmap=="Purples_cb"){
+  col.heatmap = c("#fcfbfd", "#efedf5", "#dadaeb", "#bcbddc", "#9e9ac8", "#807dba", "#6a51a3", "#54278f", "#3f007d", "#2d004b")
+}
   
   #select variables from data
   data <- distinct(data, ligand, receptor, interaction, .keep_all = T)
@@ -6989,6 +7003,9 @@ scSeqComm_contigheatmaply_cardinality <- function(full_data,data, y = "cluster_L
   else if(col.heatmap=="cividis"){
     col.heatmap =viridis_pal(option = "cividis")(11)
   }
+  else if(col.heatmap=="Purples_cb"){
+  col.heatmap = c("#fcfbfd", "#efedf5", "#dadaeb", "#bcbddc", "#9e9ac8", "#807dba", "#6a51a3", "#54278f", "#3f007d", "#2d004b")
+}
   
   #select variables from data
   data <- prepare_contigHm(data)
