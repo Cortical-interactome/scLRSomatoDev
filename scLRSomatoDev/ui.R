@@ -70,8 +70,7 @@ shinyUI(
           p("This Shiny App has been made to visualize the ligand-receptor interactions between GABAergic and Glutamatergic cells during Somatosensory Cortex development."),
           p(" You can navigate across the shiny App through the navigation bar Menu located at the top of the window."),
           p("Created and maintained by Rémi MATHIEU (INMED, INSERM, Aix Marseille Univ, France)."),
-          p("UI/UX Reworked by Lucas SILVAGNOLI (INMED, INSERM, Aix Marseille Univ, France)."),
-          p("last update: 2024-05"),
+          p("last update: 2025-09"),
         ),
 
         ## Shiny App tab showcase images
@@ -771,9 +770,10 @@ shinyUI(
                                       magma = viridis_pal(option = "magma")(10),
                                       inferno = viridis_pal(option = "inferno")(10),
                                       plasma = viridis_pal(option = "plasma")(10),
-                                      cividis = viridis_pal(option = "cividis")(10)
+                                      cividis = viridis_pal(option = "cividis")(10),
+                                      Purples_cb = c("#fcfbfd","#efedf5","#dadaeb","#bcbddc","#9e9ac8","#807dba","#6a51a3","#54278f","#3f007d","#2d004b")
                                     ),
-                                    textColor = c(rep("white", 8), "black" ,rep("white", 5) ),selected = "BuGyOrRd"),
+                                    textColor = c(rep("white", 8), "black" ,rep("white", 5) ),selected = "Purples_cb"),
 
                       ## Plot height selection   
                       sliderInput(inputId = "ExprData_height", label = "Set the  plot height:", min = 400, max = 2000, value = 600, step = 50),
@@ -892,10 +892,11 @@ shinyUI(
                           magma = viridis_pal(option = "magma")(10),
                           inferno = viridis_pal(option = "inferno")(10),
                           plasma = viridis_pal(option = "plasma")(10),
-                          cividis = viridis_pal(option = "cividis")(10)
+                          cividis = viridis_pal(option = "cividis")(10),
+                          Purples_cb = c("#fcfbfd","#efedf5","#dadaeb","#bcbddc","#9e9ac8","#807dba","#6a51a3","#54278f","#3f007d","#2d004b")
                         ),
                         textColor = c(rep("white", 8), "black" ,rep("white", 5) ),
-                        selected = "BuGyOrRd"
+                        selected = "Purples_cb"
                       ),
 
                       ##  Plot height selection
@@ -989,12 +990,13 @@ shinyUI(
                     BuGyOrRd = c("#00008b", "#1e90ff", "#cccccc", "#ffa500","#ff4500"),
                     BuGyRd= c("#00007F", "#0012FF", "#00A3FF", "#cccccc", "#E84A5FFF", "#C0392BFF", "#96281BFF"),
                     BuSkyWhPkRd=c("#0000CD", "#87CEEB","#FFFFFF", "#FFC0CB", "#CD0000"),
-                    Vik=scico(11, palette="vik")
+                    Vik=scico(11, palette="vik"),
+                    Purples_cb = c("#fcfbfd","#efedf5","#dadaeb","#bcbddc","#9e9ac8","#807dba","#6a51a3","#54278f","#3f007d","#2d004b")
                   ),
 
                   textColor = c(rep("white", 10)),
 
-                  selected = "BuSkyWhPkRd"
+                  selected = "Purples_cb"
                 ),
 
                 ##  Plot height and width selection
@@ -1118,12 +1120,13 @@ shinyUI(
                     BuGyOrRd = c("#00008b", "#1e90ff", "#cccccc", "#ffa500","#ff4500"),
                     BuGyRd= c("#00007F", "#0012FF", "#00A3FF", "#cccccc", "#E84A5FFF", "#C0392BFF", "#96281BFF"),
                     BuSkyWhPkRd=c("#0000CD", "#87CEEB","#FFFFFF", "#FFC0CB", "#CD0000"),
-                    Vik=scico(11, palette="vik")
+                    Vik=scico(11, palette="vik"),
+                    Purples_cb = c("#fcfbfd","#efedf5","#dadaeb","#bcbddc","#9e9ac8","#807dba","#6a51a3","#54278f","#3f007d","#2d004b")
                     ),
 
                   textColor = c(rep("white", 10)),
                             
-                  selected = "BuSkyWhPkRd"
+                  selected = "Purples_cb"
                 ),
 
                 ## Color palette selection for spline plot
@@ -1258,7 +1261,8 @@ shinyUI(
                                             BuGyOrRd = c("#00008b", "#1e90ff", "#cccccc", "#ffa500","#ff4500"),
                                             BuGyRd= c("#00007F", "#0012FF", "#00A3FF", "#cccccc", "#E84A5FFF", "#C0392BFF", "#96281BFF"),
                                             BuSkyWhPkRd=c("#0000CD", "#87CEEB","#FFFFFF", "#FFC0CB", "#CD0000"),
-                                            Vik=scico(11, palette="vik")
+                                            Vik=scico(11, palette="vik"),
+                                            Purples_cb = c("#fcfbfd","#efedf5","#dadaeb","#bcbddc","#9e9ac8","#807dba","#6a51a3","#54278f","#3f007d","#2d004b")
                                             ),
                                 
                                     textColor = c(rep("white", 10)),
@@ -1511,12 +1515,13 @@ shinyUI(
                                             magma = viridis_pal(option = "magma")(10),
                                             inferno = viridis_pal(option = "inferno")(10),
                                             plasma = viridis_pal(option = "plasma")(10),
-                                            cividis = viridis_pal(option = "cividis")(10)
+                                            cividis = viridis_pal(option = "cividis")(10),
+                                            Purples_cb = c("#fcfbfd","#efedf5","#dadaeb","#bcbddc","#9e9ac8","#807dba","#6a51a3","#54278f","#3f007d","#2d004b")
                                                     ),
 
                                         textColor = c(rep("black", 2), rep("white", 14)),
 
-                                        selected = "Sevilla"
+                                        selected = "Purples_cb"
                                                 ),
 
                                     ## Plot height selection
