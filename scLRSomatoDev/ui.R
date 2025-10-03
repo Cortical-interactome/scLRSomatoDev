@@ -60,7 +60,7 @@ shinyUI(
           style = "text-align: left; 
           align-content: center;
           align-items: center;",
-          
+
           br(), br(), br(),
           
           ## Welcome message
@@ -71,6 +71,8 @@ shinyUI(
           p(" You can navigate across the shiny App through the navigation bar Menu located at the top of the window."),
           p("Created and maintained by Rémi MATHIEU (INMED, INSERM, Aix Marseille Univ, France)."),
           p("last update: 2025-09"),
+          p(HTML("For detailed information on how to use the app, please refer to the <a href='https://cortical-interactome.github.io/scLRSomatoDev-Docs/' target='_blank' style='color: #007bff; text-decoration: underline;'>documentation website</a>."), style = "text-align: left; align-content: center;align-items: center;"),
+          p(HTML("if you prefer video tutorials, we recommend you to watch the following <a href='https://youtube.com/playlist?list=PLyfGSyn6Q6UY82ccuHRZQmRchVx6DskfJ&si=gZrGiV69Hm9wFUoC' target='_blank' style='color: #007bff; text-decoration: underline;'>playlist</a>"), style = "text-align: left; align-content: center;align-items: center;"),
         ),
 
         ## Shiny App tab showcase images
@@ -83,6 +85,8 @@ shinyUI(
 
         div(),
       ),
+
+      br(),
 
       br(),
 
@@ -1267,7 +1271,7 @@ shinyUI(
                                 
                                     textColor = c(rep("white", 10)),
                                 
-                                    selected = "BuRd"
+                                    selected = "Purples_cb"
                                         ),
                             
                                 ## Plot height and width selection
