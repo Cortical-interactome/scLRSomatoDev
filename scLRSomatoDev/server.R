@@ -429,7 +429,7 @@ shinyServer(function(input, output, session) {
         input$"ExprData_button"
 
         # Check the selected plot type and render the corresponding plot
-        if(!!input$"ExprData_plot"=="group_heatmap_plot"){
+        if (input$ExprData_plot == "group_heatmap_plot"){
 
         # Render a grouped heatmap plot  
         plotly_heatmap_markers(GECortex_PostMsub,"Data/logCPM_Cortex_PostMsub.tome", grouping= input$"ExprData_level",genes=isolate(input$"ExprData_gene"),
@@ -442,7 +442,7 @@ shinyServer(function(input, output, session) {
                                height=input$"ExprData_height")
         }
         
-        else if(!!input$"ExprData_plot"=="group_dot_plot"){
+        else if (input$ExprData_plot == "group_dot_plot"){
 
         # Render a grouped dot plot
         plotly_dot_markers(GECortex_PostMsub,"Data/logCPM_Cortex_PostMsub.tome", grouping= input$"ExprData_level",genes=isolate(input$"ExprData_gene"),
