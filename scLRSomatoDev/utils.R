@@ -4507,14 +4507,15 @@ group_heatmap_plotly=function (data, anno, genes, grouping,  group_order = NULL,
   ######## Prepare plot.data
   colnames(gene_stats)[2:ncol(gene_stats)] <- rep("Gene_color", ncol(gene_stats)-1)
   
-  df_data_list <- vector(mode = 'list', length=length(genes))
-  
-  
-
-  for (i in 1:length(genes)) {#plot_data
-    df_data_list[[i]] <-    dplyr::left_join(plot_anno, gene_stats[,c(1,i+1)], gene_stats_color,by = group_cols$label)
-  }
-  
+df_data_list <- vector(mode = 'list', length = length(genes))
+for (i in 1:length(genes)) { # plot_data
+  df_data_list[[i]] <- dplyr::left_join(
+    plot_anno,
+    gene_stats[, c(1, i + 1)],
+    by = group_cols$label
+  )
+}
+plot_data <- do.call(rbind, df_data_list)
     plot_data <- do.call(rbind,df_data_list)
 
   
@@ -4623,7 +4624,7 @@ group_heatmap_plotly=function (data, anno, genes, grouping,  group_order = NULL,
                                                "<br>Gene:", Gene,
                                                "<br>25% tmean log2(CPM+1):", Gene_value)), color="white")+
       scale_fill_gradientn(colors=colorset,breaks=seq(0, max(plot_data$Gene_value), length.out = 5),
-                           labels=format(round(seq(0, max(plot_data$Gene_value), length.out = 5),2),nsmall=2))++ labs(fill="25% tmean log2(CPM+1)")+
+                           labels=format(round(seq(0, max(plot_data$Gene_value), length.out = 5),2),nsmall=2))+ labs(fill="25% tmean log2(CPM+1)")+
       scale_y_discrete("",  expand = c(0, 0)) + scale_x_discrete("", expand = c(0, 0), position="top") + 
       theme_classic(fontsize) + theme(axis.text = element_text(size = rel(1), 
                                                                face = "italic"), axis.text.x = element_text(angle=90, hjust=0), 
@@ -4698,12 +4699,11 @@ plotly_heatmap_markers = function(se_obj, tome_file ,grouping="celltype",dim.red
   
   
   ########## Color for gene1
-  if(colorset=="PuOr"){
-    colorset =  brewer_pal(palette = "PuOr", direction=-1)(11)
-  }
-  else if(colorset=="GBBr "){
-    colorset =  brewer_pal(palette = "BrBG", direction=-1)(11)
-  }
+  if (colorset == "PuOr") {
+  colorset = brewer_pal(palette = "PuOr", direction = -1)(11)
+} else if (colorset == "GBBr") {
+  colorset = brewer_pal(palette = "BrBG", direction = -1)(11)
+}
   
   else if(colorset=="BuYlRd"){
     colorset = brewer_pal(palette = "RdYlBu", direction = -1)(11)
@@ -4744,7 +4744,9 @@ plotly_heatmap_markers = function(se_obj, tome_file ,grouping="celltype",dim.red
   else if(colorset=="cividis"){
     colorset =viridis_pal(option = "cividis")(10)
   }
-  
+  else if (colorset == "Purples_cb") {
+  colorset = c("#fcfbfd", "#efedf5", "#dadaeb", "#bcbddc", "#9e9ac8", "#807dba", "#6a51a3", "#54278f", "#3f007d", "#2d004b")
+}
   
   ident.class <- intersect(se_obj$class_label, ident.class) 
   ident.family <- intersect(se_obj$family_label, ident.family) 
@@ -5015,6 +5017,7 @@ group_dot_plotly=function (data, anno, genes, grouping,  group_order = NULL, sta
   }
   gene_stats <- data_df_to_colors(gene_stats1, value_cols = genes, 
                                   per_col = normalize_rows, colorset = colorset)
+                                  colnames(gene_stats)[2:ncol(gene_stats)] <- rep("Gene_color", ncol(gene_stats) - 1)
   plot_anno <- anno %>% dplyr::select(dplyr::one_of(group_cols$id, 
                                                     group_cols$label, group_cols$color)) %>% unique()
   group_counts <- anno %>% dplyr::group_by_(group_cols$id) %>% 
@@ -5024,14 +5027,14 @@ group_dot_plotly=function (data, anno, genes, grouping,  group_order = NULL, sta
                                  anno = anno, grouping = group_cols$label, stat = size_stat)
   
   ######## Prepare plot.data
-  colnames(gene_stats)[2:ncol(gene_stats)] <- rep("Gene_color", ncol(gene_stats)-1)
-  
-  df_data_list <- vector(mode = 'list', length=length(genes))
-  
-  
-  for (i in 1:length(genes)) {#plot_data
-    df_data_list[[i]] <-    dplyr::left_join(plot_anno, gene_stats[,c(1,i+1)], gene_stats_color,by = group_cols$label)
-  }
+df_data_list <- vector(mode = 'list', length = length(genes))
+for (i in 1:length(genes)) { # plot_data
+  df_data_list[[i]] <- dplyr::left_join(
+    plot_anno,
+    gene_stats[, c(1, i + 1)],
+    by = group_cols$label
+  )
+}
   
   plot_data <- do.call(rbind,df_data_list)
   
@@ -5258,7 +5261,13 @@ plotly_dot_markers = function(se_obj, tome_file ,grouping="celltype",dim.red.typ
   else if(colorset=="cividis"){
     colorset =viridis_pal(option = "cividis")(10)
   }
-  
+  else if (colorset == "Purples_cb") {
+  colorset = c("#fcfbfd", "#efedf5", "#dadaeb", "#bcbddc", "#9e9ac8", "#807dba", "#6a51a3", "#54278f", "#3f007d", "#2d004b")
+} else if (colorset == "PuOr") {
+  colorset = brewer_pal(palette = "PuOr", direction = -1)(10)
+} else if (colorset == "GBBr") {
+  colorset = brewer_pal(palette = "BrBG", direction = -1)(10)
+}
   
   ident.class <- intersect(se_obj$class_label, ident.class) 
   ident.family <- intersect(se_obj$family_label, ident.family)
