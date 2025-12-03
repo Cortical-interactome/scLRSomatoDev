@@ -21,7 +21,8 @@ scLRSomatoDev is a powerful Shiny application designed to explore and analyze li
 
 **If you use scLRSomatoDev in your research, please cite our [paper](https://www.biorxiv.org/content/10.1101/2024.09.02.610245v3):**
 
-Rémi Mathieu, Léa Corbières, Tangra Draia-Nicolau, Annousha Govindan, Vianney Bensa, Emilie Pallesi-Pocachard, Lucas Silvagnoli, Alfonso Represa, Carlos Cardoso, Ludovic Telley, Antoine de Chevigny. ***Inferring Ligand-Receptor Interactions between neuronal subtypes during mouse cortical development.*** *bioRxiv*.
+Rémi Mathieu, Léa Corbières, Tangra Draia-Nicolau, Annousha Govindan, Vianney Bensa, Emilie Pallesi-Pocachard, Lucas Silvagnoli, Alfonso Represa, Carlos Cardoso, Ludovic Telley, Antoine de Chevigny. 
+***Uncovering the Molecular Logic of Cortical Wiring between Neuronal subtypes Across Development Through Ligand–Receptor Inference*** *bioRxiv*.
 
 <br>
 
@@ -66,7 +67,7 @@ Explore a lite, feature-focused version of our app directly in your browser—no
             ```
 
 2.  **Download the required data**:
-    *   Visit our [Zenodo repository](https://github.com/Cortical-interactome/scLRSomatoDev/) (TODO: Finish Zenodo Repo + add URL).
+    *   Visit our [Zenodo repository](https://zenodo.org/records/11634657)
     *   Download the `data.zip` file.
     *   Extract its contents into your `scLRSomatoDev` folder.
     *   Verify that your folder structure matches the following:
