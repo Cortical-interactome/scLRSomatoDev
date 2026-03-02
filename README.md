@@ -19,10 +19,9 @@ scLRSomatoDev is a powerful Shiny application designed to explore and analyze li
 
 ## Citation
 
-**If you use scLRSomatoDev in your research, please cite our [paper](https://www.biorxiv.org/content/10.1101/2024.09.02.610245v3):**
+**If you use scLRSomatoDev in your research, please cite our [paper](https://www.nature.com/articles/s41467-025-68059-8):**
 
-Rémi Mathieu, Léa Corbières, Tangra Draia-Nicolau, Annousha Govindan, Vianney Bensa, Emilie Pallesi-Pocachard, Lucas Silvagnoli, Alfonso Represa, Carlos Cardoso, Ludovic Telley, Antoine de Chevigny. 
-***Uncovering the Molecular Logic of Cortical Wiring between Neuronal subtypes Across Development Through Ligand–Receptor Inference*** *bioRxiv*.
+Mathieu, R., Draia-Nicolau, T., Corbières, L. et al. Uncovering the molecular logic of cortical wiring between neuronal subtypes across development through ligand–receptor inference. **Nat Commun 17, 1298 (2026)**. [DOI](https://doi.org/10.1038/s41467-025-68059-8)
 
 <br>
 
