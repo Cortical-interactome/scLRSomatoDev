@@ -7,6 +7,12 @@
   <br>
 </p>
 
+> [!NOTE]
+> The website and the Lite version of the app are **back online**.
+>
+> For the best experience, we recommend running the full version locally via Docker.
+> See the [Installation Guide](https://cortical-interactome.github.io/scLRSomatoDev-Docs/Installation/) and our [YouTube tutorials](https://www.youtube.com/playlist?list=PLyfGSyn6Q6UY82ccuHRZQmRchVx6DskfJ) to get started.
+
 ## Introduction
 
 scLRSomatoDev is a powerful Shiny application designed to explore and analyze ligand-receptor (LR) interactions in cortical development. This tool represents a significant advancement in understanding the molecular mechanisms underlying brain circuit assembly through large-scale single-cell transcriptomic analyses. With its intuitive design, scLRSomatoDev enables seamless exploration of complex biological data.
@@ -26,11 +32,6 @@ Mathieu, R., Draia-Nicolau, T., Corbières, L. et al. Uncovering the molecular l
 <br>
 
 ### 🚀 Try a lite version of scLRSomatoDev Online!
-
-> [!WARNING]
-> The server hosting both the website and the Lite version is currently unavailable. We are actively working to restore access as soon as possible.
->
-> In the meantime, you can still try the app by following the installation instructions provided in this README, the [documentation website](https://cortical-interactome.github.io/scLRSomatoDev-Docs/Installation/), and our [YouTube tutorials](https://www.youtube.com/playlist?list=PLyfGSyn6Q6UY82ccuHRZQmRchVx6DskfJ).
 
 Explore a lite, feature-focused version of our app directly in your browser—no installation required.
 
